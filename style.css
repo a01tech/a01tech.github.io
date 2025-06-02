@@ -131,26 +131,45 @@ section h3 {
 }
 
 /* Estilo para o botão do Instagram */
-.btn-instagram {
-    display: inline-block; /* Faz com que o link se comporte como um bloco, mas na mesma linha */
-    background-color: #E1306C; /* Cor do Instagram */
+/* Estilo geral para botões de redes sociais */
+.btn-social {
+    display: inline-block;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px; /* Bordas arredondadas */
-    text-decoration: none; /* Remove o sublinhado do link */
+    padding: 10px 15px; /* Ajuste o padding para talvez ser um pouco menor para caber mais botões */
+    border-radius: 5px;
+    text-decoration: none;
     font-weight: bold;
-    margin-left: 10px; /* Espaço à esquerda do texto "Siga-nos no Instagram:" */
-    transition: background-color 0.3s ease; /* Efeito de transição suave */
+    margin-left: 10px; /* Espaço entre os botões */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Adicionado efeito de transformação */
+    font-size: 0.9em; /* Talvez um pouco menor para botões */
+}
+
+.btn-social:hover {
+    transform: translateY(-2px); /* Pequeno efeito para "levantar" o botão ao passar o mouse */
+}
+
+
+/* Estilo específico para o botão do Instagram (já existia, mas agora usa btn-social) */
+.btn-instagram {
+    background-color: #E1306C; /* Cor oficial do Instagram */
 }
 
 .btn-instagram:hover {
     background-color: #C13584; /* Cor mais escura ao passar o mouse */
 }
 
-footer {
-    background-color: #1a237e;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
+/* NOVO: Estilo para o botão do LinkedIn */
+.btn-linkedin {
+    background-color: #0077B5; /* Cor oficial do LinkedIn */
 }
+
+.btn-linkedin:hover {
+    background-color: #005582; /* Cor mais escura ao passar o mouse */
+}
+
+/* Se você tinha margem no parágrafo antes, talvez precise ajustar */
+#contato p {
+    margin-bottom: 15px; /* Espaço entre o parágrafo do email e o dos botões */
+}
+
+/* ... (o restante do seu CSS) ... */
