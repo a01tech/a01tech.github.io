@@ -90,14 +90,44 @@ section h3 {
     justify-content: center;
 }
 
-#servicos li {
-    background-color: #f0f4c3; /* Cor clara para os itens de serviço */
-    margin: 10px;
-    padding: 20px;
-    border-radius: 5px;
-    width: 280px; /* Largura fixa para os cards de serviço */
-    text-align: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+#servicos {
+    background-color: white;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 960px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    /* Propriedades para a marca d'água de fundo */
+    background-image: url('A01tech_logo.jpeg'); /* Caminho para sua logomarca */
+    background-repeat: no-repeat; /* Para não repetir a imagem */
+    background-position: center center; /* Centraliza a imagem */
+    background-size: 30%; /* Ajusta o tamanho da marca d'água (30% da largura da seção) */
+    opacity: 0.1; /* MUITO transparente, ajuste conforme necessário (0.05 a 0.2) */
+    /* Você pode precisar de uma pseudo-classe ou div interna para aplicar a opacidade apenas à imagem de fundo sem afetar o texto */
+}
+
+/* Uma maneira melhor de fazer a marca d'água de fundo sem afetar o texto é usar uma pseudo-classe */
+/* Remova as propriedades de background e opacity de #servicos e adicione isso: */
+#servicos::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('A01tech_logo.jpeg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 30%; /* Ajuste o tamanho da marca d'água */
+    opacity: 0.1; /* Opacidade bem baixa */
+    z-index: -1; /* Para que fique atrás do conteúdo */
+}
+
+/* Certifique-se de que a seção pai tenha position: relative; para que a pseudo-classe funcione */
+#servicos {
+    position: relative; /* Adicione isso */
+    /* ... (restante do CSS de #servicos) ... */
 }
 
 footer {
