@@ -130,6 +130,23 @@ section h3 {
     /* ... (restante do CSS de #servicos) ... */
 }
 
+/* Estilo para o botão do Instagram */
+.btn-instagram {
+    display: inline-block; /* Faz com que o link se comporte como um bloco, mas na mesma linha */
+    background-color: #E1306C; /* Cor do Instagram */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: bold;
+    margin-left: 10px; /* Espaço à esquerda do texto "Siga-nos no Instagram:" */
+    transition: background-color 0.3s ease; /* Efeito de transição suave */
+}
+
+.btn-instagram:hover {
+    background-color: #C13584; /* Cor mais escura ao passar o mouse */
+}
+
 footer {
     background-color: #1a237e;
     color: white;
